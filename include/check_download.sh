@@ -699,9 +699,9 @@ checkDownload() {
   if [ "${phpmyadmin_flag}" == 'y' ]; then
     echo "Download phpMyAdmin..."
     if [[ "${php_option}" =~ ^[1-5]$ ]] || [[ "${mphp_ver}" =~ ^5[3-6]$|^70$ ]]; then
-      src_url=https://files.phpmyadmin.net/phpMyAdmin/4.4.15.10/phpMyAdmin-4.4.15.10-all-languages.tar.gz && Download_src
+      src_url=${mirror_link}/src/phpMyAdmin-4.4.15.10-all-languages.tar.gz && Download_src
     else
-      src_url=https://files.phpmyadmin.net/phpMyAdmin/${phpmyadmin_ver}/phpMyAdmin-${phpmyadmin_ver}-all-languages.tar.gz && Download_src
+      src_url=${mirror_link}/src/phpMyAdmin-${phpmyadmin_ver}-all-languages.tar.gz && Download_src
     fi
   fi
 
